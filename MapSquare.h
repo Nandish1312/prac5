@@ -9,15 +9,17 @@
 using namespace std;
 
 class MapSquare:public MapGeneric 
+
 {
+            
+    protected:
+    
+        int f(int a);
     
     public:
     
         MapSquare();
-        
-    protected:
-    
-        int f(int a);
+
 };
 
 #endif 

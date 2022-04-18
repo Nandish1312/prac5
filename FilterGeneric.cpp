@@ -1,19 +1,31 @@
 #include "FilterGeneric.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-vector<int> FilterGeneric::filter(vector<int> vector1)
+vector<int> FilterGeneric::filter(vector<int> num_vector)
+
 {
-  if(g(vector1[0]) == true)
+  
+  if(g(num_vector[0]) == true)
+  
   {
-    temp_vector.insert(temp_vector.end(),vector1[0]);
+    
+    vec_temp.insert(vec_temp.end(),num_vector[0]);
+    
   }  
-  if (vector1.size() == 1)
+  
+  if (num_vector.size() == 1)
+  
   {
-    return temp_vector;
+    
+    return vec_temp;
+    
   }
-  vector <int> temp(vector1.begin()+1, vector1.end());
-  return filter(temp);
+  
+  vector <int> num(num_vector.begin()+1, num_vector.end());
+  
+  return filter(num);
 }

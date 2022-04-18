@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "FilterGeneric.h"
 #include "FilterForTwoDigitPositive.h"
 using namespace std;
@@ -8,14 +9,24 @@ using namespace std;
 FilterForTwoDigitPositive::FilterForTwoDigitPositive()
 {}
 
-bool FilterForTwoDigitPositive::g(int number)
+bool FilterForTwoDigitPositive::g(int count)
+
 {
-  if ((number > 99) || (number < 10))
+  
+  if ((count > 10) || (count < 99))
+  
   {
-    return false;
-  }
-  else
-  {
+    
     return true;
+    
   }
+  
+  else
+  
+  {
+    
+    return false;
+    
+  }
+  
 }

@@ -13,13 +13,13 @@ MapGeneric::MapGeneric()
 
 }
 
-vector<int> MapGeneric::map(vector<int> array) 
+vector<int> MapGeneric::map(vector<int> generic) 
 
 {
   
-  check.insert(check.end(),f(array[0]));
+  check.insert(check.end(),f(generic[0]));
   
-  if (array.size() == 1) 
+  if (generic.size() == 1) 
   
   {
     
@@ -27,7 +27,7 @@ vector<int> MapGeneric::map(vector<int> array)
     
   }
   
-  vector <int> random(array.begin()+1, array.end());
+  vector <int> random(generic.begin()+1, generic.end());
   
   return map(random);
   

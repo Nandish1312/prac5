@@ -2,18 +2,31 @@
 #include <vector>
 #include <string>
 using namespace std;
+
 #include "FilterGeneric.h"
 #include "FilterOdd.h"
 
+FilterOdd::FilterOdd()
+{}
 
-FilterOdd::FilterOdd(){
+bool FilterOdd::g(int count)
+
+{
   
-}
-
-bool FilterOdd::g(int number){
-  if (number % 2 == 0){
-    return false;
-  }else{
+  if (count % 2 != 0)
+  
+  {
+    
     return true;
+    
   }
+  
+  else
+  
+  {
+    
+    return false;
+  
+  }
+
 }

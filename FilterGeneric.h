@@ -1,18 +1,25 @@
 #ifndef FILTERGENERIC_H
 #define FILTERGENERIC_H
+
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-
 class FilterGeneric
+
 {
-    private:
-        virtual bool g(int number) = 0;
-        vector<int> temp_vector;
-        
+    
     public:
-        vector<int> filter(vector<int> vector1);
+    
+        vector<int> filter(vector<int> num_vector);
+    
+    private:
+    
+        vector<int> vec_temp;
+        
+        virtual bool g(int count) = 0;
+
 };
+
 #endif 

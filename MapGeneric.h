@@ -7,16 +7,24 @@
 using namespace std;
 
 class MapGeneric 
+
 {
+    
+     public:
+    
+        MapGeneric();
+        
+        vector<int> map(vector<int> generic);
+        
     private:
     
         vector<int> check;
+        
         virtual int f(int a) = 0;
         
-    public:
-    
-        MapGeneric();
-        vector<int> map(vector<int> array);
 };
 
 #endif 
+
+
+
