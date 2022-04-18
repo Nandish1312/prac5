@@ -4,14 +4,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "MapGeneric.h"
 using namespace std;
 
-class MapSquare:public MapGeneric {
+class MapSquare:public MapGeneric 
+{
+    
     public:
+    
         MapSquare();
+        
     protected:
-        int f(int n);
+    
+        int f(int a);
 };
 
-#endif //MAPSQUARE_H
+#endif 

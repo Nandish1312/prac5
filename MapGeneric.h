@@ -6,13 +6,17 @@
 #include <string>
 using namespace std;
 
-class MapGeneric {
+class MapGeneric 
+{
     private:
-        vector<int> test;
-        virtual int f(int n) = 0;
+    
+        vector<int> check;
+        virtual int f(int a) = 0;
+        
     public:
+    
         MapGeneric();
         vector<int> map(vector<int> array);
 };
 
-#endif //MAPGENERIC.h
+#endif 

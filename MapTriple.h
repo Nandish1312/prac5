@@ -4,14 +4,21 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "MapGeneric.h"
 using namespace std;
 
-class MapTriple:public MapGeneric {
+class MapTriple:public MapGeneric 
+
+{
     public:
+    
         MapTriple();
+        
     protected:
-        int f(int n);
+    
+        int f(int a);
+        
 };
 
-#endif //MAPTRIPLE_H
+#endif 

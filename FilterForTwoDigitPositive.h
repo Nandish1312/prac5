@@ -6,7 +6,8 @@
 #include "FilterGeneric.h"
 using namespace std;
 
-class FilterForTwoDigitPositive:public FilterGeneric{
+class FilterForTwoDigitPositive:public FilterGeneric
+{
     public:
     FilterForTwoDigitPositive();
     

@@ -1,13 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "MapGeneric.h"
 #include "MapSquare.h"
 using namespace std;
 
+MapSquare::MapSquare()
+{}
 
-MapSquare::MapSquare(){}
+int MapSquare::f(int a)
 
-int MapSquare::f(int n) {
-  return n*n;
+{
+    
+  return a*a;
+ 
 }
