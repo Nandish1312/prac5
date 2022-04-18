@@ -19,30 +19,32 @@
 using namespace std;
 
 int main() 
-
 {
   
-  vector<int> len = {};
+  vector<int> L = {};
 
-  string load;
+  string input;
   
-  getline(cin, load);
+  getline(cin, input);
   
-  alpha_flow = l_flow;
+  stringstream str_strm;
   
-  l_flow << load;
+  str_strm << input;
   
-  string interim_str;
+  string temp_str;
   
-  int interim_variable;
+  int temp_int;
   
-  while(!l_flow.eof())
+  while(!str_strm.eof())
   
   {
     
-    l_flow >> interim_str;
+    str_strm >> temp_str;
     
-    if(alpha_flow(interim_str) >> interim_variable)
+    if(stringstream(temp_str) >> temp_int) 
+    
+    {
+      L.push_back(temp_int);
     
     {
       
