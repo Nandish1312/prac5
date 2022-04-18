@@ -5,13 +5,17 @@
 #include "FilterForTwoDigitPositive.h"
 using namespace std;
 
-FilterForTwoDigitPositive::FilterForTwoDigitPositive(){ 
-}
+FilterForTwoDigitPositive::FilterForTwoDigitPositive()
+{}
 
-bool FilterForTwoDigitPositive::g(int number){
-  if ((number > 99) || (number < 10)){
+bool FilterForTwoDigitPositive::g(int number)
+{
+  if ((number > 99) || (number < 10))
+  {
     return false;
-  }else{
+  }
+  else
+  {
     return true;
   }
 }

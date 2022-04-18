@@ -6,7 +6,8 @@
 using namespace std;
 
 
-class FilterGeneric{
+class FilterGeneric
+{
     private:
         virtual bool g(int number) = 0;
         vector<int> temp_vector;
