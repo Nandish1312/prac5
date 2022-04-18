@@ -13,11 +13,11 @@ bool FilterNonPositive::g(int count)
 
 {
   
-  if (count >= 0)
+  if (count <= 0)
   
   {
     
-    return false;
+    return true;
     
   }
   
@@ -25,7 +25,7 @@ bool FilterNonPositive::g(int count)
   
   {
     
-    return true;
+    return false;
   
   }
   

@@ -13,11 +13,11 @@ bool FilterOdd::g(int count)
 
 {
   
-  if (count % 2 == 0)
+  if (count % 2 != 0)
   
   {
     
-    return false;
+    return true;
     
   }
   
@@ -25,7 +25,7 @@ bool FilterOdd::g(int count)
   
   {
     
-    return true;
+    return false;
   
   }
 
