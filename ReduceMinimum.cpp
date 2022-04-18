@@ -25,7 +25,7 @@ int ReduceMinimum::binaryOperator(int a, int b)
   
   {
     
-    return ;
+    return a;
   
   }
   
