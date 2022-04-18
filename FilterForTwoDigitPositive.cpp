@@ -13,11 +13,11 @@ bool FilterForTwoDigitPositive::g(int count)
 
 {
   
-  if ((count > 10) || (count < 99))
+  if ((count > 99) || (count < 10))
   
   {
     
-    return true;
+    return false;
     
   }
   
@@ -25,7 +25,7 @@ bool FilterForTwoDigitPositive::g(int count)
   
   {
     
-    return false;
+    return true;
     
   }
   
