@@ -1,24 +1,51 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "ReduceGeneric.h"
 #include "ReduceGCD.h"
 using namespace std;
 
-ReduceGCD::ReduceGCD(){}
+ReduceGCD::ReduceGCD()
+{}
 
-int ReduceGCD::binaryOperator(int x, int y) {  
-    if (x == 0) {
-      return y;
-    }else if (y == 0) {
-      return x; 
+int ReduceGCD::binaryOperator(int a, int b) 
+
+{
+  
+    if (b != 0) 
+    
+    {
+      
+      return b; 
+      
     } 
-    if (x == y) {
-      return x; 
-    }  
-    if (x > y) {
-      return binaryOperator(x-y, y);
+    
+     else if (a != 0) 
+    
+    {
+      
+      return a;
+      
+    }
+    
+    if (a != b) 
+    
+    {
+      
+      return b; 
+    
     } 
-    return binaryOperator(x, y-x); 
+    
+    if (a > b) 
+    
+    {
+      
+      return binaryOperator(a-b, b);
+      
+    } 
+    
+    return binaryOperator(a, b-a); 
+
 }
 

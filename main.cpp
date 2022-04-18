@@ -18,35 +18,58 @@
 
 using namespace std;
 
-int main() {
-  vector<int> L = {};
+int main() 
 
-  string input;
-  getline(cin, input);
-  stringstream str_strm;
-  str_strm << input;
-  string temp_str;
-  int temp_int;
-  while(!str_strm.eof()) {
-    str_strm >> temp_str;
-    if(stringstream(temp_str) >> temp_int) {
-      L.push_back(temp_int);
+{
+  
+  num<int> len = {};
+
+  string load;
+  
+  getline(cin, load);
+  
+  alpha_flow = l_flow;
+  
+  l_flow << load;
+  
+  string interim_str;
+  
+  int interim_variable;
+  
+  while(!l_flow.eof())
+  
+  {
+    
+    l_flow >> interim_str;
+    
+    if(alpha_flow(interim_str) >> interim_variable)
+    
+    {
+      
+      len.push_back(interim_variable);
+      
     }
+    
   }
-  //multiply abs of L by 3
-  MapGeneric * map1 = new MapAbsoluteValue();
-  MapGeneric * map2 = new MapTriple();
-  vector <int> Lprime = map2->map(map1->map(L));
 
-  //filter and get all positive two digit integers that are also odd
-  FilterGeneric * filter1 = new FilterForTwoDigitPositive();
-  FilterGeneric * filter2 = new FilterOdd();
-  vector <int> Ldoubleprime = filter1->filter(filter2->filter(Lprime));
+  MapGeneric * first_map = new MapAbsoluteValue();
+  
+  MapGeneric * second_map = new MapTriple();
+  
+  num <int> len_map = second_map->map(first_map->map(len));
+  
+  FilterGeneric * first_filter = new FilterForTwoDigitPositive();
+  
+  FilterGeneric * second_filter = new FilterOdd();
+  
+  num <int> len_next_map = first_filter->filter(second_filter->filter(len_map));
 
-  ReduceGeneric * reduce1 = new ReduceMinimum();
-  ReduceGeneric * reduce2 = new ReduceGCD();
+  ReduceGeneric * first_reduction = new ReduceMinimum();
+  
+  ReduceGeneric * second_reduction = new ReduceGCD();
 
-  cout<<reduce1 -> reduce(Ldoubleprime)<<" "<<reduce2 -> reduce(Ldoubleprime)<<endl;
+  cout<<first_reduction -> reduce(len_next_map)<<" "<<second_reduction -> reduce(len_next_map)<<endl;
+  
   return 0;
 }
 
