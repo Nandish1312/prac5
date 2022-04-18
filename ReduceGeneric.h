@@ -12,7 +12,7 @@ class ReduceGeneric
           
     public:
     
-        int reduce(vector<int> reduce);
+        int reduce(vector<int> reduce_generic);
     
     protected:
     
