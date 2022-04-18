@@ -6,21 +6,21 @@
 using namespace std;
 
 
-int ReduceGeneric::reduce(vector<int> reduce) 
+int ReduceGeneric::reduce(vector<int> reduce_generic)
 
 {
-  
-  if (reduce.size() == 2) 
-  
+
+  if (reduce_generic.size() == 2)
+
   {
-    
-    return binaryOperator(reduce[0], reduce[1]);
-    
+
+    return binaryOperator(reduce_generic[0], reduce_generic[1]);
+
   }
-  
-  vector <int> num(reduce.begin(), reduce.end()-1);
-  
-  return binaryOperator(reduce(num),reduce[reduce.size()-1]);
+
+  vector <int> temp(reduce_generic.begin(), reduce_generic.end()-1);
+
+  return binaryOperator(reduce(temp),reduce_generic[reduce_generic.size()-1]);
 }
 
 
