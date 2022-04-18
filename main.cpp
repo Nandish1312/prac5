@@ -22,7 +22,7 @@ int main()
 
 {
   
-  num<int> len = {};
+  vector<int> len = {};
 
   string load;
   
@@ -52,23 +52,23 @@ int main()
     
   }
 
-  MapGeneric * first_map = new MapAbsoluteValue();
+  MapGeneric * map1 = new MapAbsoluteValue();
   
-  MapGeneric * second_map = new MapTriple();
+  MapGeneric * map2 = new MapTriple();
   
-  num <int> len_map = second_map->map(first_map->map(len));
-  
-  FilterGeneric * first_filter = new FilterForTwoDigitPositive();
-  
-  FilterGeneric * second_filter = new FilterOdd();
-  
-  num <int> len_next_map = first_filter->filter(second_filter->filter(len_map));
+  vector <int> Lprime = map2->map(map1->map(L));
 
-  ReduceGeneric * first_reduction = new ReduceMinimum();
+  FilterGeneric * filter1 = new FilterForTwoDigitPositive();
   
-  ReduceGeneric * second_reduction = new ReduceGCD();
+  FilterGeneric * filter2 = new FilterOdd();
+  
+  vector <int> Ldoubleprime = filter1->filter(filter2->filter(Lprime));
 
-  cout<<first_reduction -> reduce(len_next_map)<<" "<<second_reduction -> reduce(len_next_map)<<endl;
+  ReduceGeneric * reduce1 = new ReduceMinimum();
+  
+  ReduceGeneric * reduce2 = new ReduceGCD();
+
+  cout<<reduce1 -> reduce(Ldoubleprime)<<" "<<reduce2 -> reduce(Ldoubleprime)<<endl;
   
   return 0;
 }
