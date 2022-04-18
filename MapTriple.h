@@ -11,14 +11,14 @@ using namespace std;
 class MapTriple:public MapGeneric 
 
 {
-    public:
-    
-        MapTriple();
-        
     protected:
     
         int f(int a);
-        
+       
+    public:
+    
+        MapTriple();
+    
 };
 
 #endif 

@@ -1,7 +1,6 @@
 #ifndef MAPABSOLUTEVALUE_H
 #define MAPABSOLUTEVALUE_H
 
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -12,12 +11,15 @@ using namespace std;
 class MapAbsoluteValue:public MapGeneric 
 
 {
+            
+    protected:
+    
+        int f(int a);
+      
     public:
     
         MapAbsoluteValue();
-        
-    protected:
-        int f(int a);
+  
 };
 
 #endif 
