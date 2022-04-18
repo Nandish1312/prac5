@@ -13,31 +13,31 @@ int ReduceGCD::binaryOperator(int a, int b)
 
 {
   
-    if (b != 0) 
+    if (a == 0) 
     
     {
       
-      return b; 
+      return b;
       
-    } 
+    }
     
-     else if (a != 0) 
+    else if (b == 0) 
     
     {
       
       return a;
       
-    }
+    } 
     
-    if (a != b) 
+    if (a == b) 
     
     {
       
-      return b; 
+      return a;
+      
+    }  
     
-    } 
-    
-    if (a > b) 
+    if (a > b)
     
     {
       
@@ -46,6 +46,4 @@ int ReduceGCD::binaryOperator(int a, int b)
     } 
     
     return binaryOperator(a, b-a); 
-
 }
-
